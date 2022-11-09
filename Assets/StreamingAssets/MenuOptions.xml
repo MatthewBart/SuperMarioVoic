@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<grammar xml:lang="en-US" root="MenuOptions"
+tag-format="semantics/1.0" version="1.0"
+xmlns="http://www.w3.org/2001/06/grammar">
+
+  <!--Defines rules for in menu options. These rules have very few options as the intended design is to read the clearly indicated menu options in order to use them-->
+  <rule id="MenuOptions">
+    <one-of>
+      <item>
+        <ruleref uri="#ok"/>
+      </item>
+      <item>
+        <ruleref uri="#start"/>
+      </item>
+      <item>
+        <ruleref uri="#tutorial"/>
+      </item>
+      <item>
+        <ruleref uri="#return"/>
+      </item>
+      <item>
+        <ruleref uri="#quit"/>
+      </item>
+    </one-of>
+  </rule>
+
+  <rule id="ok">
+    <tag>out.action= "ok";</tag>
+    <one-of>
+      <item>yes</item>
+      <item>ok</item>
+    </one-of>
+  </rule>
+
+  <rule id="start">
+    <tag>out.action= "begin";</tag>
+    <one-of>
+      <item>start</item>
+      <item>start game</item>
+      <item>begin</item>
+      <item>begin game</item>
+    </one-of>
+  </rule>
+
+  <rule id="tutorial">
+    <tag>out.action= "tutorial";</tag>
+    <one-of>
+      <item>tutorial</item>
+      <item>instructions</item>
+      <item>how to play</item>
+  </one-of>
+  </rule>
+
+  <rule id="return">
+    <tag>out.action= "return";</tag>
+    <one-of>
+      <item>return</item>
+      <item>exit</item>
+      <item>menu</item>
+    </one-of>
+  </rule>
+
+  <rule id="quit">
+    <tag>out.action= "quit";</tag>
+    <one-of>
+      <item>quit</item>
+      <item>quit game</item>
+    </one-of>
+  </rule>
+
+</grammar>

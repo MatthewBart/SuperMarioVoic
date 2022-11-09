@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<grammar xml:lang="en-US" root="GameOptions"
+tag-format="semantics/1.0" version="1.0"
+xmlns="http://www.w3.org/2001/06/grammar">
+
+  <!--Defines rules for in game options. These rules have very few options as they are meant to be clear and concise in order for the player to be able to play the game with little confusion-->
+  <rule id="GameOptions">
+    <one-of>
+      <item>
+        <ruleref uri="#run"/>
+      </item>
+      <item>
+        <ruleref uri="#walk"/>
+      </item>
+      <item>
+        <ruleref uri="#stop"/>
+      </item>
+      <item>
+        <ruleref uri="#left"/>
+      </item>
+      <item>
+        <ruleref uri="#right"/>
+      </item>
+      <item>
+        <ruleref uri="#jump"/>
+      </item>
+      <item>
+        <ruleref uri="#enter"/>
+      </item>
+      <item>
+        <ruleref uri="#pause"/>
+      </item>
+      <item>
+        <ruleref uri="#tutorial"/>
+      </item>
+      <item>
+        <ruleref uri="#return"/>
+      </item>
+      <item>
+        <ruleref uri="#quit"/>
+      </item>
+      <item>
+        <ruleref uri="#replay"/>
+      </item>
+      <item>
+        <ruleref uri="#menu"/>
+      </item>
+    </one-of>
+  </rule>
+
+  <rule id="run">
+    <tag>out.action= "run";</tag>
+    <item>run</item>
+  </rule>
+  
+  <rule id="walk">
+    <tag>out.action= "walk";</tag>
+    <item>walk</item>
+  </rule>
+
+  <rule id="left">
+    <tag>out.action= "left";</tag>
+    <item>left</item>
+  </rule>
+
+  <rule id="right">
+    <tag>out.action= "right";</tag>
+    <item>right</item>
+  </rule>
+
+  <rule id="stop">
+    <tag>out.action= "stop";</tag>
+    <item>stop</item>
+  </rule>
+
+  <rule id="jump">
+    <tag>out.action= "jump";</tag>
+    <one-of>
+      <item>jump</item>
+      <item>up</item>
+      <item>jump up</item>
+    </one-of>
+  </rule>
+
+  <rule id="enter">
+    <tag>out.action= "enter";</tag>
+    <one-of>
+      <item>enter</item>
+      <item>enter pipe</item>
+    </one-of>
+  </rule>
+
+  <rule id="pause">
+    <tag>out.action= "pause";</tag>
+    <one-of>
+      <item>pause</item>
+      <item>pause game</item>
+    </one-of>
+  </rule>
+
+  <rule id="tutorial">
+    <tag>out.action= "tutorial";</tag>
+    <one-of>
+      <item>tutorial</item>
+      <item>instructions</item>
+    </one-of>
+  </rule>
+
+  <rule id="return">
+    <tag>out.action= "return";</tag>
+    <one-of>
+      <item>return</item>
+      <item>back</item>
+      <item>leave</item>
+    </one-of>
+  </rule>
+
+  <rule id="quit">
+    <tag>out.action= "quit";</tag>
+    <one-of>
+      <item>quit</item>
+      <item>quit game</item>
+    </one-of>
+  </rule>
+
+  <rule id="replay">
+    <tag>out.action= "replay";</tag>
+    <one-of>
+      <item>replay</item>
+      <item>restart</item>
+      <item>play again</item>
+    </one-of>
+  </rule>
+  
+  <rule id="menu">
+    <tag>out.action= "menu";</tag>
+    <one-of>
+      <item>menu</item>
+      <item>back to menu</item>
+    </one-of>
+  </rule>
+
+</grammar>
